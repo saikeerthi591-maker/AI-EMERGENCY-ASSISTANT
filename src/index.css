@@ -1,0 +1,135 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-light-gradient: linear-gradient(135deg, #ECE4F8 0%, #F5EEF9 45%, #FFF8F8 100%);
+    --bg-dark: #15161B;
+    --card-light: rgba(255, 255, 255, 0.85);
+    --card-dark: rgba(34, 37, 45, 0.85);
+    --border-light: rgba(255, 255, 255, 0.6);
+    --border-dark: rgba(255, 255, 255, 0.1);
+  }
+}
+
+.bg-soft-lavender {
+  background: linear-gradient(135deg, #ECE4F8 0%, #F5EEF9 45%, #FFF8F8 100%);
+}
+
+.bg-dark-canvas {
+  background-color: #15161B;
+}
+
+/* Glass Floating Cards */
+.glass-card-light {
+  background: rgba(255, 255, 255, 0.82);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: 24px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-card-light:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 18px 42px rgba(0, 0, 0, 0.09);
+  background: rgba(255, 255, 255, 0.92);
+}
+
+.glass-card-dark {
+  background: rgba(34, 37, 45, 0.82);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 24px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.35);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-card-dark:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 18px 42px rgba(0, 0, 0, 0.45);
+  border-color: rgba(91, 124, 250, 0.3);
+}
+
+/* Glass Sidebar & Nav */
+.glass-sidebar-light {
+  background: rgba(245, 238, 249, 0.85);
+  backdrop-filter: blur(20px);
+  border-right: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+.glass-sidebar-dark {
+  background: rgba(22, 24, 31, 0.85);
+  backdrop-filter: blur(20px);
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* SOS Pulse Animation */
+@keyframes sosGlow {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(229, 57, 53, 0.6), 0 10px 30px rgba(229, 57, 53, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 0 18px rgba(229, 57, 53, 0), 0 15px 45px rgba(229, 57, 53, 0.7);
+  }
+}
+
+/* GPS Blue Pulse Animation */
+@keyframes gpsGlow {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(91, 124, 250, 0.7), 0 0 20px rgba(91, 124, 250, 0.8);
+  }
+  50% {
+    box-shadow: 0 0 0 22px rgba(91, 124, 250, 0), 0 0 35px rgba(91, 124, 250, 0.9);
+  }
+}
+
+.animate-sos-pulse {
+  animation: sosGlow 2s infinite cubic-bezier(0.4, 0, 0.6, 1);
+}
+
+.animate-gps-pulse {
+  animation: gpsGlow 2.2s infinite cubic-bezier(0.4, 0, 0.6, 1);
+}
+
+.leaflet-container {
+  background-color: #1a1d24 !important;
+  border-radius: 1.5rem !important;
+}
+
+.custom-user-pin, .custom-shelter-pin, .custom-hazard-pin {
+  background: transparent;
+  border: none;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(184, 154, 231, 0.3);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(184, 154, 231, 0.6);
+}
+
+/* Hide Google Translate top banner & widget */
+body {
+    top: 0px !important; 
+}
+.skiptranslate iframe, .goog-te-banner-frame {
+    display: none !important;
+}
+#google_translate_element {
+    display: none !important;
+}
+.goog-te-spinner-pos {
+    display: none !important;
+}
+

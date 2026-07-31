@@ -1,0 +1,6 @@
+{
+  "name": "AI Emergency Assistant",
+  "description": "AI-powered disaster management platform for citizens and emergency responders with alert summarization, safe shelter finder, smart SOS, and rescue prioritization.",
+  "requestFramePermissions": ["geolocation", "camera", "microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
